@@ -8,7 +8,7 @@ test: $(TARGETS) $(OUTPUTS)
 diagram: $(DIAGRAMS)
 
 %: %.c
-	gcc -Wall -O3 -o $@ $<
+	gcc -Wall -O3 -o $@ $< -lm
 
 %.png: %
 	time ./$<
